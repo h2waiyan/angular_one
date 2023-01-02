@@ -1,0 +1,14 @@
+<p>shoppingcart works!</p>
+
+<ul>
+    <li *ngFor = 'let product of productList' (click)="onSelectedProduct(product)">
+        {{product.name}}
+    </li>
+</ul>
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<select (change)="onChangeE($event)">
+    <option value="1">1</option>
+    <option value="2">2</option>
+</select>

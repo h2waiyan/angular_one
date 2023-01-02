@@ -1,0 +1,41 @@
+<p>productlist works!</p>
+
+
+<!-- parent component -->
+<app-shoppingcart [productList]="products" (onSelected)="onSelectedProduct($event)"></app-shoppingcart>
+
+<i class="fa-regular fa-clipboard-list"></i>
+
+<mat-slide-toggle (change)="myfun($event)">Slide me!</mat-slide-toggle>
+
+
+<div class="item">
+    <ngx-skeleton-loader
+    appearance = 'circle'
+    count="5"
+    [theme]="{ 
+      'border-radius': '5px',
+      height: '50px',
+      'background-color': '#992929',
+      border: '1px solid white'
+    }"
+></ngx-skeleton-loader>
+    <!-- above line will produce the rendering of 5 circles with the pulse animation and the aria-valuetext attribute set with "This item is actually loading..." -->
+</div>
+
+<div *ngIf = "selectedProduct">
+    <h1>
+        You have {{selectedProduct.name}} in your cart.
+    </h1>
+
+    <h1>
+        Your reference id is {{ref_id}}
+    </h1>
+</div>
+
+
+<div>
+    <p>Start typing!</p>
+    <input ngModel #username>
+    <p>{{ username.value }}</p>
+  </div>
