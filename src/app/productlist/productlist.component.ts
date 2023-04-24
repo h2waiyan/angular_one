@@ -14,12 +14,11 @@ export class ProductlistComponent implements OnInit {
 
   constructor() { }
 
-  myfun(event: any) : void {
+  myfun(event: any): void {
 
     console.log(event.checked);
-   
+
   }
- 
 
   products = [
     {
@@ -39,20 +38,20 @@ export class ProductlistComponent implements OnInit {
     },
   ]
 
-  selectedProduct : any;
+  selectedProduct: any;
 
-  ref_id : any;
+  ref_id: any;
 
   ngOnInit(): void {
   }
 
-  onSelectedProduct(product : any){
+  onSelectedProduct(product: any) {
     console.log("This is from Parent component -------- ");
-    
+
     console.log(product);
 
     this.selectedProduct = product;
-    
+
   }
 
   ngAfterViewInit() {
@@ -60,7 +59,7 @@ export class ProductlistComponent implements OnInit {
     this.ref_id = this.CartCom.ref_id;
 
     console.log(this.input);
-    
+
   }
 
 }

@@ -13,6 +13,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NewformComponent } from './newform/newform.component';
 import { MoviesComponent } from './movies/movies.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SquarePipe } from './square.pipe';
+import { PowerPipe } from './power.pipe';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { HttpClientModule } from '@angular/common/http';
     ShoppingcartComponent,
     SignupComponent,
     NewformComponent,
-    MoviesComponent
+    MoviesComponent,
+    SquarePipe,
+    PowerPipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

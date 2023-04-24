@@ -1,6 +1,11 @@
 <p>productlist works!</p>
 
 
+<p appHighlight> WOW This is awesome</p>
+<!-- <h1>{{ 4 | square }}</h1> -->
+
+<h1>{{10 | power }}</h1>
+
 <!-- parent component -->
 <app-shoppingcart [productList]="products" (onSelected)="onSelectedProduct($event)"></app-shoppingcart>
 
